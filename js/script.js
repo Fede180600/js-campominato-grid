@@ -1,18 +1,20 @@
 //Generare una griglia di gioco quadrata in cui ogni cella contiene un numero compreso tra 1 e 100. Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
 //Genero i 100 numeri
-// creo la array
-const numbers = [];
+const gridContainer = document.querySelector('.grid-container');
 
-// imposto il ciclo per generare 100 numeri
 for (let i = 0; i < 100; i++) {
-    let number = Math.floor(Math.random() * 100) + 1;
-    console.log(number);
-    if (number < number - 1 && number > number + 1) {
-        number = Math.floor(Math.random() * 100) + 1;
-    } else {
-        numbers.push(number);
-    }
+    const cell = document.createElement('div');
+    cell.classList.add('grid-item');
+    cell.innerHTML = i + 1;
+    gridContainer.append(cell);
+
+    // Aggiungere la classe hover al click
+    cell.addEventListener("click", function() {
+        this.classList.add('active');
+    });
+
 }
 
-console.log(numbers);
+
+

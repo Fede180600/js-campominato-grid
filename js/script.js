@@ -5,7 +5,7 @@
 const numbers = [];
 
 // imposto il ciclo per generare 100 numeri
-for (let i = 1; i < 100; i++) {
+for (let i = 0; i < 100; i++) {
     let number = Math.floor(Math.random() * 100) + 1;
     console.log(number);
     if (number < number - 1 && number > number + 1) {

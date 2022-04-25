@@ -30,7 +30,10 @@ header {
     justify-content: flex-start;
     align-items: center;
     align-content: center;
-    
+}
+
+.header-right>button {
+    padding: 0 15px;
 }
 
 .logo-container {
@@ -66,6 +69,11 @@ main{
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
+    display: none;
+}
+
+.d-block {
+    display: block;
 }
 
 .grid-item {

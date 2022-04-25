@@ -59,6 +59,19 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+main>h2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 26px;
+}
+
+.d-none {
+    display: none;
 }
 
 .grid-container {
@@ -75,7 +88,7 @@ main{
     display: block;
 }
 
-.grid-item {
+.grid-item-xs {
     width: calc(100% / 10);
     height: calc(100% / 10);
     border: 1px solid black;
@@ -84,6 +97,28 @@ main{
     justify-content: center;
 }
 
+.grid-item-sm {
+    width: calc(100% / 9);
+    height: calc(100% / 9);
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-item-lg {
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 footer {
     height: 50px;
+}
+
+.footer-text>a {
+    color: cornflowerblue;
 }

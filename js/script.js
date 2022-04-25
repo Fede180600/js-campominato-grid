@@ -2,27 +2,61 @@
 
 // Prelevo il button play
 document.getElementById('play').addEventListener("click", function() {
-    //Genero i 100 numeri 
+    // Prelevo il contenitore della griglia
     const gridContainer = document.querySelector('.grid-container');
-    
-    for (let i = 0; i < 100; i++) {
-        const cell = document.createElement('div');
-        cell.classList.add('grid-item');
-        cell.innerHTML = i + 1;
-        gridContainer.append(cell);
-    
-        // Aggiungere la classe hover al click
-        cell.addEventListener("click", function() {
-            this.classList.add('active');
-        });
-    
-    }
-
-    // Prelevo il valore del select
+    gridContainer.innerHTML = '';
+    // Prelevo il valore di select
     const gameDifficulty = document.getElementById('difficulty').value;
-    console.log(gameDifficulty);
+    // Rimuovo il titolo
+    document.getElementById('my-title').classList.add('d-none');
 
-    
+    // Genero 100 cells se il valore di select è: easy
+    if (gameDifficulty === 'easy') {
+        for (let i = 0; i < 100; i++) {
+            const cell = document.createElement('div');
+            cell.classList.add('grid-item-xs');
+            cell.innerHTML = i + 1;
+            gridContainer.append(cell);
+        
+            // Aggiungere la classe hover al click
+            cell.addEventListener("click", function() {
+                this.classList.add('active');
+            });
+        
+        }
+    };
+
+    // Genero 81 cells se il valore di select è: normal
+    if (gameDifficulty === 'normal') {
+        for (let i = 0; i < 81; i++) {
+            const cell = document.createElement('div');
+            cell.classList.add('grid-item-sm');
+            cell.innerHTML = i + 1;
+            gridContainer.append(cell);
+        
+            // Aggiungere la classe hover al click
+            cell.addEventListener("click", function() {
+                this.classList.add('active');
+            });
+        
+        }
+    };
+
+    // Genero 49 cells se il valore di selectè: hard
+    if (gameDifficulty === 'hard') {
+        for (let i = 0; i < 49; i++) {
+            const cell = document.createElement('div');
+            cell.classList.add('grid-item-lg');
+            cell.innerHTML = i + 1;
+            gridContainer.append(cell);
+        
+            // Aggiungere la classe hover al click
+            cell.addEventListener("click", function() {
+                this.classList.add('active');
+            });
+        
+        }
+    };
 });
 
 
